@@ -15,7 +15,7 @@ export const SelectHeight = ({ setHeight, height }) => {
         }}
       />
       <input
-        className="w-full text-gray-950 bg-prime"
+        className="w-full accent-accentColor "
         type="range"
         id="height"
         min="80"

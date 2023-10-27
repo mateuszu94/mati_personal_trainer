@@ -17,9 +17,9 @@ module.exports = {
     },
     extend: {
       colors: {
-        accentColor: "#A9730B",
-        baseColor: "#CBC9E5",
-        prime: "#111E32",
+        accentColor: "#E1AA74",
+        baseColor: "#3876BF",
+        prime: "#192655",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

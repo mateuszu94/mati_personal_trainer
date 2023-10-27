@@ -5,73 +5,76 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="relative">
-      <div className="w-full h-[90vh] bg-[#111E32] left-0 ">
+    <div className="flex flex-row h-[90vh]   items-center justify-center bg-hero bg-cover">
+      <div className="w-1/2 h-full left-0 relative ">
         {" "}
-        <div className="w-[60vh] h-80 bg-white absolute skew-x-[75deg] left-[10%] rounded-full bottom-0 z-0">
-          fdggdf
-        </div>
         <Image
-          className="z-10 absolute"
-          width={900}
-          height={900}
+          className="absolute top-8"
+          width={516}
+          height={531}
           src="/trenner.png"
+          alt="trenner"
         ></Image>
       </div>
-      <motion.div
-        className="bg-[#e0d290] w-1/2 h-[90vh]  absolute z-50 top-0 right-0 border-solid   rounded-tl-full border-[#111E32] border-l-[14vh]"
-        animate={{
-          opacity: [1, 0, 0],
-          borderRadius: ["20%%", "50%", "100%"],
-        }}
-        transition={{
-          duration: 10,
+      <div className="relative  font-sans font-extrabold text-white w-1/2 h-[20vh]">
+        <motion.div
+          className=" border-solid opacity-0   flex items-center justify-center absolute w-full h-full   "
+          animate={{
+            opacity: [0, 1, 1, 0],
+            scale: [0, 1, 1, 0],
+          }}
+          transition={{
+            duration: 12,
 
-          times: [0, 0.3, 1],
-          repeat: Infinity,
-          repeatDelay: 1,
-        }}
-      >
-        {" "}
-        <p className="text-hero"> Gotowy na zmiany?</p>
-      </motion.div>
-      <motion.div
-        className="bg-[#e0d290] w-1/2 h-[90vh]   absolute z-40 top-0 right-0 border-solid   rounded-tl-full border-[#111E32] border-l-[14vh]"
-        animate={{
-          opacity: [0, 0, 1, 0],
-          borderRadius: ["100%", "100%", "50%", "20%"],
-        }}
-        transition={{
-          duration: 10,
-          times: [0, 0.2, 0.5, 0.7],
-          repeat: Infinity,
-          repeatDelay: 1,
-        }}
-      >
-        {" "}
-        <p className="text-hero">
-          Odkryj potencjał swojego ciała z naszym personalnym treningiem!
-        </p>
-      </motion.div>
-      <motion.div
-        className="bg-[#e0d290] w-1/2 h-[90vh]   absolute z-40 top-0 right-0 border-solid   rounded-tl-full border-[#111E32] border-l-[14vh]"
-        animate={{
-          opacity: [0, 0, 1, 0],
-          borderRadius: ["20%", "20%", "50%", "100%"],
-        }}
-        transition={{
-          duration: 10,
-          times: [0, 0.62, 0.7, 1],
-          repeat: Infinity,
-          repeatDelay: 1,
-        }}
-      >
-        {" "}
-        <p className="text-hero">
-          Razem osiągniemy twój cel Nie czekaj, zacznij zmiany w swoim życiu już
-          dziś!
-        </p>
-      </motion.div>
+            times: [0, 0.05, 0.25, 0.3],
+            repeat: Infinity,
+            repeatDelay: 1,
+            ease: "easeInOut",
+          }}
+        >
+          {" "}
+          <p className="text-4xl text-center"> Gotowy na zmiany?</p>
+        </motion.div>
+        <motion.div
+          className="  w-full h-full opacity-0  flex items-center justify-center absolute        "
+          animate={{
+            opacity: [0, 0, 1, 1, 0],
+            scale: [0, 0, 1, 1, 0],
+          }}
+          transition={{
+            duration: 12,
+            times: [0, 0.2, 0.5, 0.6, 0.7],
+            repeat: Infinity,
+            repeatDelay: 1,
+            ease: "easeInOut",
+          }}
+        >
+          {" "}
+          <p className="text-4xl text-center">
+            Odkryj potencjał swojego ciała z naszym personalnym treningiem!
+          </p>
+        </motion.div>
+        <motion.div
+          className="  w-full absolute opacity-0  flex items-center justify-center h-full   "
+          animate={{
+            opacity: [0, 0, 1, 1, 0],
+            scale: [0, 0, 1, 1, 0],
+          }}
+          transition={{
+            duration: 12,
+            times: [0, 0.62, 0.73, 0.9, 1],
+            repeat: Infinity,
+            repeatDelay: 1,
+            ease: "easeInOut",
+          }}
+        >
+          {" "}
+          <p className="text-4xl text-center">
+            Razem osiągniemy twój cel Nie czekaj, zacznij zmiany w swoim życiu
+            już dziś!
+          </p>
+        </motion.div>
+      </div>
     </div>
   );
 };

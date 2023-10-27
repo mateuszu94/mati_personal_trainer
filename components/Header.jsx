@@ -32,19 +32,19 @@ export const Header = () => {
   return (
     <div className="">
       <div ref={ref} className="bg-[#111E32] flex border-[#A9730B] border-b-2 ">
-        <div className="h-20 w-20">
-          <div>
-            <Link href="/">
+        <Link href="/">
+          <div className="h-20 w-20 rounded-xl ml-10 hover:scale-110 cursor-pointer transition duration-300 ">
+            <div>
               <Image
                 width={80}
                 height={80}
                 src="/Logo.png"
                 alt="logo"
-                className="rounded-md ml-10 hover:scale-110 cursor-pointer transition duration-300 "
+                className="rounded-xl  "
               />{" "}
-            </Link>
+            </div>
           </div>
-        </div>
+        </Link>
         <div className="header-bg  h-20 w-full flex  justify-end mr-10 max-lg:hidden	">
           <Button
             asChild

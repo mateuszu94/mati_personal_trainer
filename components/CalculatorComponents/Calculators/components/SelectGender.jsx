@@ -2,6 +2,8 @@ import { BsGenderMale } from "react-icons/bs";
 import { BsGenderFemale } from "react-icons/bs";
 
 export const SelectGender = ({ setGender, gender }) => {
+  const mailGender = "Mężczyzna";
+  const femailGender = "kobieta";
   return (
     <div className="calculator-gender ">
       <h3 className="calculator-inLine_title shadow-md shadow-black  w-full">
@@ -11,11 +13,15 @@ export const SelectGender = ({ setGender, gender }) => {
         <label
           htmlFor="male"
           className={`calculator-interact_div w-1/2 ${
-            gender === "Mężczyzna" ? "border-4 border-prime " : ""
+            gender === mailGender ? "border-4 border-accentColor " : ""
           }`}
         >
           {" "}
-          <BsGenderMale />
+          <div
+            className={`${gender === mailGender ? " text-accentColor " : ""}`}
+          >
+            <BsGenderMale />
+          </div>
         </label>
         <input
           required
@@ -23,8 +29,8 @@ export const SelectGender = ({ setGender, gender }) => {
           type="radio"
           id="male"
           name="gender"
-          value="Mężczyzna"
-          checked={gender === "Mężczyzna"}
+          value={mailGender}
+          checked={gender === mailGender}
           onChange={(e) => {
             setGender(e.target.value);
           }}
@@ -33,11 +39,15 @@ export const SelectGender = ({ setGender, gender }) => {
         <label
           htmlFor="female"
           className={`calculator-interact_div w-1/2   ${
-            gender === "kobieta" ? "border-4 border-prime " : ""
+            gender === femailGender ? "border-4 border-accentColor " : ""
           }`}
         >
           {" "}
-          <BsGenderFemale />
+          <div
+            className={`${gender === femailGender ? " text-accentColor " : ""}`}
+          >
+            <BsGenderFemale />
+          </div>
         </label>
         <input
           required
@@ -45,8 +55,8 @@ export const SelectGender = ({ setGender, gender }) => {
           type="radio"
           id="female"
           name="gender"
-          value="kobieta"
-          checked={gender === "kobieta"}
+          value={femailGender}
+          checked={gender === femailGender}
           onChange={(e) => {
             setGender(e.target.value);
           }}

@@ -14,7 +14,7 @@ export const SelectWeigth = ({ setWeight, weight }) => {
         }}
       />
       <input
-        className="w-full text-gray-950 bg-prime"
+        className="w-full accent-accentColor"
         type="range"
         id="weight"
         min="1"
