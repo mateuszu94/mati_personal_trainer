@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import {
   BsFillPersonFill,
   BsTelephoneInboundFill,
-  BsFillClipboardCheckFill,
+  BsYoutube,
 } from "react-icons/bs";
 import {
   AiOutlineMail,
@@ -18,43 +18,49 @@ import {
 } from "react-icons/ai";
 import { MdLocationOn } from "react-icons/md";
 import Image from "next/image";
+import { Separator } from "@/components/ui/separator";
+import { ContactLine } from "./componets/contactLine";
 
-const ContactLine = ({ icon, text, href }) => {
-  const { toast } = useToast();
-
-  const onCoppyClick = (text) => {
-    navigator.clipboard.writeText(text);
-    toast({
-      title: "Kopiowanie",
-      description: "Text został skopiowany",
-      variant: "success",
-    });
-  };
-
-  return (
-    <div className=" mr-[10%] ">
-      <div className="flex flex-row">
-        <a href={href} className="contact_info_smallButton">
-          {icon}
-        </a>
-
-        <div
-          onClick={() => onCoppyClick(text)}
-          className="contact_info_smallButton "
-        >
-          <BsFillClipboardCheckFill />
-        </div>
-
-        <a
-          href={href}
-          className="ml-5 pt-2 text-xl text-slate-500 hover:cursor-pointer font-serif hover:text-prime "
-        >
-          : {text}
-        </a>
-      </div>
-    </div>
-  );
-};
+const contactInfo = [
+  {
+    href: "/O-mnie",
+    text: "Mateusz Wątroba",
+    whatWasCopped: "Mail",
+    icon: <BsFillPersonFill />,
+  },
+  {
+    href: "tel:+728909526",
+    text: "728909526",
+    whatWasCopped: "Numer",
+    icon: <BsTelephoneInboundFill />,
+  },
+  {
+    href: "mailto:mateusz.u.94@gmail.com",
+    text: "mateusz.u.94@gmail.com",
+    whatWasCopped: "Mail",
+    icon: <AiOutlineMail />,
+  },
+];
+const mediaInfo = [
+  {
+    href: "/O-mnie",
+    text: "Mateusz Wątroba",
+    whatWasCopped: "youtube",
+    icon: <BsYoutube />,
+  },
+  {
+    href: "/O-mnie",
+    text: "728909526",
+    whatWasCopped: "instagram",
+    icon: <AiFillInstagram />,
+  },
+  {
+    href: "/O-mnie",
+    text: "mateusz.u.94@gmail.com",
+    whatWasCopped: "facebook",
+    icon: <AiFillFacebook />,
+  },
+];
 
 const contact = () => {
   const [name, setName] = useState("");
@@ -200,24 +206,14 @@ const contact = () => {
           }}
         >
           <h2 className="contact-info_title ">Dane kontaktowe</h2>{" "}
-          <ContactLine
-            href={"/O-mnie"}
-            text={"Mateusz Wątroba"}
-            whatWasCopped={"Mail"}
-            icon={<BsFillPersonFill />}
-          />
-          <ContactLine
-            href={"tel:+728909526"}
-            text={"728909526"}
-            whatWasCopped={"Numer"}
-            icon={<BsTelephoneInboundFill />}
-          />
-          <ContactLine
-            href={"mailto:mateusz.u.94@gmail.com"}
-            text={"mateusz.u.94@gmail.com"}
-            whatWasCopped={"Mail"}
-            icon={<AiOutlineMail />}
-          />
+          {contactInfo.map((contact) => (
+            <ContactLine
+              href={contact.href}
+              text={contact.text}
+              whatWasCopped={contact.whatWasCopped}
+              icon={contact.icon}
+            />
+          ))}
           <h2 className="contact-info_title">Miejsca treningów</h2>{" "}
           <ContactLine
             href={"/O-mnie"}
@@ -226,22 +222,15 @@ const contact = () => {
             icon={<MdLocationOn />}
           />
           <h2 className="contact-info_title">Media sopłecznościowe</h2>{" "}
-          <ContactLine
-            href={"/O-mnie"}
-            text={"adres 1"}
-            whatWasCopped={"Instagram"}
-            icon={<AiFillInstagram />}
-          />
-          <ContactLine
-            href={"/O-mnie"}
-            text={"adres 1"}
-            icon={<AiFillYoutube />}
-          />
-          <ContactLine
-            href={"/O-mnie"}
-            text={"adres 1"}
-            icon={<AiFillFacebook />}
-          />
+          <Separator />
+          {mediaInfo.map((contact) => (
+            <ContactLine
+              href={contact.href}
+              text={contact.text}
+              whatWasCopped={contact.whatWasCopped}
+              icon={contact.icon}
+            />
+          ))}
         </motion.div>
       </div>
     </div>

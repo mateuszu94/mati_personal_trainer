@@ -6,10 +6,10 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <div className="flex flex-row h-[90vh]   items-center justify-center bg-hero bg-cover">
-      <div className="w-1/2 h-full left-0 relative ">
+      <div className="w-1/2 h-full left-0 relative  ">
         {" "}
         <Image
-          className="absolute top-8"
+          className="absolute bottom-[10%] left-[15%]  scale-[1.6]"
           width={516}
           height={531}
           src="/trenner.png"

@@ -61,6 +61,13 @@ module.exports = {
       },
       backgroundImage: {
         hero: "url('/Bg_Hero.jpg')",
+        smallDiet: "url('/Bg_SmallDiet.jpg')",
+        calculator: "url('/calculator.jpg')",
+        stepsBg: "url('/steps-bg.jpg')",
+        flex: "url('/FlexMen.png')",
+        clippboard: "url('/clippboard.png')",
+        bench: "url('/trenner-bench.jpg')",
+        clipboard: "url('/trainerHero1.png')",
         TakingWeight: "url('/TakingWeight.jpg')",
       },
       keyframes: {
