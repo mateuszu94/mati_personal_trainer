@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 
 import { AiFillCloseCircle } from "react-icons/ai";
 import { motion } from "framer-motion";
+import { ArrowBigUpDash } from "lucide-react";
 
 const components = [
   {
@@ -43,10 +44,23 @@ export const SmallScreanHedder = ({ setopenSmallMenu, openSmallMenu }) => {
   }
   return (
     <motion.div
-      className="ease-in-out duration-300	 fixed w-[50vh]  h-[100vh] border-l-2    border-[#A9730B] bg-prime  right-0  z-10 "
-      initial={{ translateX: "100%", radius: "50px", scale: 0 }}
-      animate={{ translateX: "0%", radius: "0px", scale: 1, type: "spring" }}
+      className="ease-in-out duration-300	 fixed w-[50vh]  h-[100vh] border-l-2    border-[#A9730B] bg-baseColor  right-0  z-50 "
+      initial={{ translateX: "100%", borderRadius: 100, scale: 0 }}
+      animate={{ translateX: "0%", borderRadius: 20, scale: 1 }}
+      transition={{
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+        duration: 100,
+      }}
     >
+      <div className=" h-12 p-4 text-right">
+        <div className=" text-white text-4xl ">
+          <Link href={"/"}>
+            <ArrowBigUpDash />
+          </Link>
+        </div>
+      </div>
       <div className=" h-12 text-right">
         <Button onClick={onClick} className=" text-white text-4xl ">
           <AiFillCloseCircle />
@@ -55,7 +69,7 @@ export const SmallScreanHedder = ({ setopenSmallMenu, openSmallMenu }) => {
       <Accordion type="single" collapsible className="w-full text-white   ">
         <AccordionItem value="item-3" className="h-12 ">
           <Link
-            className="text-accentColor ml-5  hover:text-slate-400"
+            className="text-white ml-5  hover:text-accentColor"
             onClick={onClick}
             href="O-mnie"
           >
@@ -64,7 +78,7 @@ export const SmallScreanHedder = ({ setopenSmallMenu, openSmallMenu }) => {
         </AccordionItem>
         <AccordionItem value="item-3" className="h-12 ">
           <Link
-            className="text-accentColor ml-5  hover:text-slate-400"
+            className="text-white ml-5  hover:text-accentColor"
             onClick={onClick}
             href="/Oferta"
           >
@@ -73,7 +87,7 @@ export const SmallScreanHedder = ({ setopenSmallMenu, openSmallMenu }) => {
         </AccordionItem>
         <AccordionItem value="item-3" className="h-12 hover:text-base">
           <Link
-            className="text-accentColor ml-5  hover:text-slate-400"
+            className="text-white ml-5  hover:text-accentColor"
             onClick={onClick}
             href="/Kontakt"
           >
@@ -82,13 +96,16 @@ export const SmallScreanHedder = ({ setopenSmallMenu, openSmallMenu }) => {
         </AccordionItem>
         <AccordionItem value="item-1">
           <AccordionTrigger>
-            <p className="text-accentColor ml-5 hover:text-slate-400">
+            <p className="text-white ml-5 hover:text-accentColor">
               Zobacz dostępne materiały pomocnicze
             </p>{" "}
           </AccordionTrigger>
           <div className="bg-smallDiet ml-0 bg-cover">
-            {components.map((component) => (
-              <AccordionContent className="hover:text-black animate duration-1000 ease-in-out   hover:bg-slate-400 hover:rounded-2xl">
+            {components.map((component, index) => (
+              <AccordionContent
+                key={index}
+                className="hover:text-black animate duration-1000 ease-in-out   hover:bg-slate-400 hover:rounded-2xl"
+              >
                 <Link onClick={onClick} href={component.href}>
                   <p className="p-1 pl-4">{component.title}</p>
                 </Link>
@@ -97,7 +114,7 @@ export const SmallScreanHedder = ({ setopenSmallMenu, openSmallMenu }) => {
           </div>
         </AccordionItem>
         <AccordionItem value="item-2" className=" w-full ">
-          <AccordionTrigger className="text-accentColor ml-5 hover:text-slate-400">
+          <AccordionTrigger className="text-white ml-5 hover:text-accentColor">
             Kalkulatory
           </AccordionTrigger>
           <div className=" bg-calculator bg-cover w-full h-full ml-0  ">

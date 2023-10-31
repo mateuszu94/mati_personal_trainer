@@ -2,11 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
+.shake {
+  animation: shake 1s;
+}
+@keyframes shake {
+  0% {
+    transform: translate(-2px, -2px);
+  }
+  10% {
+    transform: translate(2px, -2px);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  30% {
+    transform: translate(2px, -2px);
+  }
+  40% {
+    transform: translate(-2px, 2px);
+  }
+  50% {
+    transform: translate(2px, -2px);
+  }
+  60% {
+    transform: translate(-2px, 2px);
+  }
+  70% {
+    transform: translate(2px, -2px);
+  }
+  80% {
+    transform: translate(-2px, 2px);
+  }
+  90% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
 .grainy {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAAElBMVEUAAAD8/vz08vT09vT8+vzs7uxH16TeAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAuFJREFUOI0Vk+3NLiEIRG1B8ClAYAsQ2AIEt4D9ePtv5Xp/mZgYJ2fOFJKEfInkVWY2aglmQFkimRTV7MblYyVqD7HXyhKsSuPX12MeDhRHLtGvRG+P+B/S0Vu4OswR9tmvwNPyhdCDbVayJGads/WiUWcjCvCnruTBNHS9gmX2VzVbk7ZvB1gb1hkWFGl+A/n+/FowcO34U/XvKqZ/fHY+6vgRfU92XrOBUbGeeDfQmjWjdrK+frc6FdGReQhfSF5JvR29O2QrfNw1huTwlgsyXLo0u+5So82sgv7tsFZR2nxB6lXiquHrfD8nfYZ9SeT0LiuvSoVrxGY16pCNRZKqvwWsn5OHypPBELzohMCaRaa0ceTHYqe7X/gfJEEtKFbJpWoNqO+aS1cuTykGPpK5Ga48m6L3NefTr013KqYBQu929iP1oQ/7UwSR+i3zqruUmT84qmhzLpxyj7pr9kg7LKvqaXxZmdpn+6o8sHqSqojy02gU3U8q9PnpidiaLks0mbMYz+q2uVXsoBQ8bfURULYxRgZVYCHMv9F4OA7qxT2NPPpvGQ/sTDH2yznKh7E2AcErfcNsaIoN1izzbJiaY63x4QjUFdBSvDCvugPpu5xDny0jzEeuUQbcP1aGT9V90uixngTRLYNEIIZ6yOF1H8tm7rj2JxiefsVy53zGVy3ag5uuPsdufYOzYxLRxngKe7nhx3VAq54pmz/DK9/Q3aDam2Yt3hNXB4HuU87jKNd/CKZn77Qdn5QkXPfqSkhk7hGOXXB+7v09KbBbqdvxGqa0AqfK/atIrL2WXdAgXAJ43Wtwe/aIoacXezeGPMlhDOHDbSfHnaXsL2QzbT82GRwZuezdwcoWzx5pnOnGMUdHuiY7lhdyWzWiHnucLZQxYStMJbtcydHaQ6vtMbe0AcDbxG+QG14AL94xry4297xpy9Cpf1OoxZ740gHDfrK+gtsy0xabwJmfgtCeii79B6aj0SJeLbd7AAAAAElFTkSuQmCC);
 }
 .titleSize {
   @apply select-none 2xl:text-[40px] xl:text-[38px]  font-bold lg:text-[25px] md:text-[20px] sm:text-[15px];
+}
+.subtitleSize {
+  @apply text-[12px] xl:text-[30px] lg:text-[16px];
+}
+.textSize {
+  @apply text-[10px] xl:text-[20px] lg:text-[12px];
 }
 
 .flexCenter {
@@ -76,4 +120,21 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+.MyServices__bgImg:hover {
+  transform: none;
+}
+
+.myServiceShowcase__container {
+  @apply cursor-pointer absolute h-[400px]  flex-col transform skew-x-2    transition hover:z-50 hover:shadow-2xl MyServices__bgImg  hover:shadow-slate-400   duration-1000 w-full z-20  bg-cover   translate-y-5 ease-in-out;
+}
+
+.myServiceShowcase__ArrowButton {
+  @apply flex items-center text-[80px] hover:text-green-600 text-white w-[8%] h-[100%]  hover:cursor-pointer bg-black bg-opacity-70 rounded-md shadow-lg  shadow-black;
+}
+.myServiceShowcase__HiddencheckLine {
+  @apply absolute h-full  w-2 right-[30%] top-0;
+}
+.myServices__page {
+  @apply relative h-[125vh]  overflow-hidden;
 }

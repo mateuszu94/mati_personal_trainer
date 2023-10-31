@@ -61,7 +61,13 @@ module.exports = {
       },
       backgroundImage: {
         hero: "url('/Bg_Hero.jpg')",
+        dieta: "url('/Bg_MyServicesDiet.jpg')",
+        trening: "url('/Bg_MyServicesTrening.jpg')",
+        dietaTrening: "url('/Bg_MyServicesMix.png')",
+        smoke: "url('/smoke.png')",
+        apple: "url('/Bg_Hero.jpg')",
         smallDiet: "url('/Bg_SmallDiet.jpg')",
+        bigDiet: "url('/Bg_BigDiet.jpg')",
         calculator: "url('/calculator.jpg')",
         stepsBg: "url('/steps-bg.jpg')",
         flex: "url('/FlexMen.png')",

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Step from "../ui/step";
+import Step from "./components/step";
 
 const steps = [
   {

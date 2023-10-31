@@ -26,7 +26,6 @@ export const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  console.log(isScrolling);
 
   return (
     <div className="">
@@ -57,13 +56,17 @@ export const Header = () => {
       </div>
       {isScrolling && (
         <motion.div
-          className="bg-prime right-10 fixed  flex items-center justify-center rounded-full border border-accentColor  w-20 h-20"
+          className="bg-slate-500 shadow-md shadow-white right-10 fixed z-20  flex items-center justify-center rounded-full border border-accentColor  w-20 h-20"
           initial={{ translateX: "100%", radius: "50px", scale: 0 }}
           animate={{
             translateX: "0%",
             radius: "0px",
             scale: 1,
+          }}
+          transition={{
             type: "spring",
+            stiffness: 260,
+            damping: 20,
           }}
         >
           <Button onClick={() => setopenSmallMenu(true)}>

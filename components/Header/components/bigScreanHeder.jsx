@@ -48,7 +48,7 @@ export function BigScreanHeder() {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/Oferta" legacyBehavior passHref>
+          <Link href="/Oferta?Option=" legacyBehavior passHref>
             <NavigationMenuLink
               className={cn("text-white hover:text-accentColor mx-5")}
             >

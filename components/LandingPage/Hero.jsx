@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="w-1/2 h-full left-0 relative  ">
         {" "}
         <Image
-          className="absolute bottom-[10%] left-[15%]  scale-[1.6]"
+          className="absolute bottom-[10%] left-[15%] max-lg:left-[8%]  max-xl:scale-[1.6] 2xl:scale-[1.6] lg:scale-[1.2] md:scale-[1] max:md:slale[1]"
           width={516}
           height={531}
           src="/trenner.png"
@@ -33,7 +33,7 @@ const Hero = () => {
           }}
         >
           {" "}
-          <p className="text-4xl text-center"> Gotowy na zmiany?</p>
+          <p className="titleSize text-center"> Gotowy na zmiany?</p>
         </motion.div>
         <motion.div
           className="  w-full h-full opacity-0  flex items-center justify-center absolute        "
@@ -50,7 +50,7 @@ const Hero = () => {
           }}
         >
           {" "}
-          <p className="text-4xl text-center">
+          <p className="titleSize text-center">
             Odkryj potencjał swojego ciała z naszym personalnym treningiem!
           </p>
         </motion.div>
@@ -69,7 +69,7 @@ const Hero = () => {
           }}
         >
           {" "}
-          <p className="text-4xl text-center">
+          <p className="titleSize text-center">
             Razem osiągniemy twój cel Nie czekaj, zacznij zmiany w swoim życiu
             już dziś!
           </p>
