@@ -1,5 +1,5 @@
+import React from "react";
 import { WhyDiet } from "./components/whyDiet";
-
 import { WhyWorkout } from "./components/whyWorkout";
 
 const Why = () => {

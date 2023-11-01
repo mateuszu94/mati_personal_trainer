@@ -33,7 +33,7 @@ const Hero = () => {
           }}
         >
           {" "}
-          <p className="titleSize text-center"> Gotowy na zmiany?</p>
+          <p className="titleSize text-center textShadow"> Gotowy na zmiany?</p>
         </motion.div>
         <motion.div
           className="  w-full h-full opacity-0  flex items-center justify-center absolute        "
@@ -50,7 +50,7 @@ const Hero = () => {
           }}
         >
           {" "}
-          <p className="titleSize text-center">
+          <p className="titleSize text-center textShadow">
             Odkryj potencjał swojego ciała z naszym personalnym treningiem!
           </p>
         </motion.div>
@@ -69,7 +69,7 @@ const Hero = () => {
           }}
         >
           {" "}
-          <p className="titleSize text-center">
+          <p className="titleSize text-center textShadow">
             Razem osiągniemy twój cel Nie czekaj, zacznij zmiany w swoim życiu
             już dziś!
           </p>

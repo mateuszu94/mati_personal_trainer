@@ -3,7 +3,6 @@ import OfferShowcase from "@/components/Offer/OfferShowcase";
 import { useRouter, useSearchParams } from "next/navigation";
 
 import React, { useState, useEffect, useRef } from "react";
-import { AiOutlineArrowLeft } from "react-icons/ai";
 
 const MyOffer = () => {
   const [option, setOption] = useState("");
