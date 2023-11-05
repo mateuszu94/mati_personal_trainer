@@ -13,20 +13,20 @@ export const Logo = () => {
       <Tooltip>
         <TooltipTrigger>
           <Link href="/">
-            <div className="h-20 w-20 rounded-xl ml-10 hover:scale-110 cursor-pointer transition duration-300 ">
+            <div className="h-20 w-20 bg-slate-500 border border-black shadow-md shadow-white rounded-xl ml-10 hover:scale-110 cursor-pointer transition duration-300 ">
               <div>
                 <Image
                   width={80}
                   height={80}
                   src="/Logo.png"
                   alt="logo"
-                  className="rounded-xl  "
+                  className="rounded-xl p-[3px]  "
                 />{" "}
               </div>
             </div>
           </Link>
         </TooltipTrigger>
-        <TooltipContent className="bg-white rounded-full">
+        <TooltipContent className="bg-white text-black rounded-full">
           <p>powrót do strony głownej</p>
         </TooltipContent>
       </Tooltip>

@@ -61,6 +61,9 @@ module.exports = {
       },
       backgroundImage: {
         hero: "url('/Bg_Hero.jpg')",
+        SoloTreningIcon: "url('/SoloTreningIcon.png')",
+        BoyIcon: "url('/BoyIcon.png')",
+        CoupleTrenningIcon: "url('/CoupleTrenningIcon.png')",
         dieta: "url('/Bg_MyServicesDiet.jpg')",
         trening: "url('/Bg_MyServicesTrening.jpg')",
         dietaTrening: "url('/Bg_MyServicesMix.png')",

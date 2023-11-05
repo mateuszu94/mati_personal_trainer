@@ -8,6 +8,8 @@ export const SelectWeigth = ({ setWeight, weight }) => {
         required
         className="calculator-number_div"
         type="number"
+        min="1"
+        max="400"
         value={weight}
         onChange={(e) => {
           setWeight(e.target.value);

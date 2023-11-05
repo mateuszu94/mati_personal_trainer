@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 import { render } from "@react-email/render";
-import { EmailTemplate } from "@/components/email-template";
+import { EmailTemplate } from "@/components/EmailTempleates/email-template";
 
 export async function POST(request) {
   const { name, email, title, message } = await request.json();
@@ -26,7 +26,7 @@ export async function POST(request) {
   const mailOptions = {
     from: process.env.MY_EMAIL,
     to: process.env.MY_EMAIL,
-    subject: "hello world",
+    subject: "",
     html: emailHtml,
   };
 

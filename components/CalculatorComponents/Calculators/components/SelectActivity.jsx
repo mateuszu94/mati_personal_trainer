@@ -12,7 +12,7 @@ export const SelectActivity = ({
     <div className="calculator-interact_div  w-full flexCol">
       <label className="calculator-inLine_title ">Aktywność fizyczna</label>
       <select
-        className="calculator-select_div"
+        className="calculator-select_div  "
         value={physicalActivity}
         onChange={(e) => {
           setphysicalActivity(e.target.value);

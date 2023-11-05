@@ -107,19 +107,22 @@ const OfferShowcase = ({ text, bg, top, onDrag }) => {
         onMouseUp={handleMouseRelease}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className={`myServiceShowcase__container ${bg} ${top}   `}
+        className={`cursor-pointer border-2 border-slate-400 rounded-xl absolute h-[400px] textShadow text-center  flex-col transform skew-x-2 transition hover:z-50 hover:shadow-2xl MyServices__bgImg  hover:shadow-slate-400   duration-1000 w-full z-20  bg-cover   translate-y-5 ease-in-out ${bg} ${top}   `}
         style={FinalDivStyle}
       >
         <div
           onClick={handleButtonOutClick}
-          className="myServiceShowcase__ArrowButton"
+          className="flex items-center text-[80px] hover:text-green-600 text-white w-[8%] h-[100%]  hover:cursor-pointer bg-black bg-opacity-70 rounded-md shadow-lg  shadow-black;"
         >
           <AiOutlineArrowLeft />
         </div>
-        <div className="absolute top-[50%] left-[50%] text-white font-bold text-6xl translate-y-[-50%]">
+        <div className="absolute top-[50%] left-[50%]  text-white font-serif font-bold text-6xl translate-y-[-50%]">
           <h2>{text}</h2>
         </div>
-        <div ref={divRef} className="myServiceShowcase__HiddencheckLine"></div>{" "}
+        <div
+          ref={divRef}
+          className="absolute h-full  w-2 right-[30%] top-0;"
+        ></div>{" "}
       </div>
 
       <div>

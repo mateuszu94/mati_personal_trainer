@@ -1,7 +1,7 @@
 import { useToast } from "@/components/ui/use-toast";
 import { BsFillClipboardCheckFill } from "react-icons/bs";
 
-export const ContactLine = ({ icon, text, href }) => {
+export const ContactLine = ({ icon, text, href, color }) => {
   const { toast } = useToast();
 
   const onCoppyClick = (text) => {
@@ -16,7 +16,10 @@ export const ContactLine = ({ icon, text, href }) => {
   return (
     <div className=" mr-[10%] ">
       <div className="flex flex-row">
-        <a href={href} className="contact_info_smallButton">
+        <a
+          href={href}
+          className={` ${color} rounded-xl w-12 h-12  flex justify-center items-center duration-700 ease-in m-2 text-white hover:text-prime hover:bg-green-600 animate-in   hover:rounded-full hover:cursor-pointer`}
+        >
           {icon}
         </a>
 

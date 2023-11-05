@@ -27,18 +27,21 @@ const contactInfo = [
     text: "Mateusz Wątroba",
     whatWasCopped: "Mail",
     icon: <BsFillPersonFill />,
+    color: "bg-prime",
   },
   {
     href: "tel:+728909526",
     text: "728909526",
     whatWasCopped: "Numer",
     icon: <BsTelephoneInboundFill />,
+    color: "bg-prime",
   },
   {
     href: "mailto:mateusz.u.94@gmail.com",
     text: "mateusz.u.94@gmail.com",
     whatWasCopped: "Mail",
     icon: <AiOutlineMail />,
+    color: "bg-prime",
   },
 ];
 const mediaInfo = [
@@ -47,18 +50,21 @@ const mediaInfo = [
     text: "Mateusz Wątroba",
     whatWasCopped: "youtube",
     icon: <BsYoutube />,
+    color: "bg-red-600",
   },
   {
     href: "/O-mnie",
     text: "728909526",
     whatWasCopped: "instagram",
     icon: <AiFillInstagram />,
+    color: "bg-violet-500",
   },
   {
     href: "/O-mnie",
     text: "mateusz.u.94@gmail.com",
     whatWasCopped: "facebook",
     icon: <AiFillFacebook />,
+    color: "bg-baseColor",
   },
 ];
 
@@ -205,30 +211,37 @@ const contact = () => {
             delay: 2,
           }}
         >
+          <Separator className="bg-black my-4 " />
           <h2 className="contact-info_title ">Dane kontaktowe</h2>{" "}
           {contactInfo.map((contact) => (
-            <ContactLine
-              href={contact.href}
-              text={contact.text}
-              whatWasCopped={contact.whatWasCopped}
-              icon={contact.icon}
-            />
+            <div>
+              <ContactLine
+                href={contact.href}
+                text={contact.text}
+                whatWasCopped={contact.whatWasCopped}
+                icon={contact.icon}
+                color={contact.color}
+              />
+            </div>
           ))}
+          <Separator className="bg-black my-2 " />
           <h2 className="contact-info_title">Miejsca treningów</h2>{" "}
           <ContactLine
             href={"/O-mnie"}
             text={"adres 1"}
             whatWasCopped={"Adres"}
             icon={<MdLocationOn />}
-          />
+            color={"bg-baseColor"}
+          />{" "}
+          <Separator className="bg-black my-2" />
           <h2 className="contact-info_title">Media sopłecznościowe</h2>{" "}
-          <Separator />
           {mediaInfo.map((contact) => (
             <ContactLine
               href={contact.href}
               text={contact.text}
               whatWasCopped={contact.whatWasCopped}
               icon={contact.icon}
+              color={contact.color}
             />
           ))}
         </motion.div>

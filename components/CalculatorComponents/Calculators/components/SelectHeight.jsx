@@ -6,9 +6,11 @@ export const SelectHeight = ({ setHeight, height }) => {
       </label>
       <input
         required
-        className="calculator-number_div"
+        className="calculator-number_div "
         type="number"
         id="height"
+        min="80"
+        max="300"
         value={height}
         onChange={(e) => {
           setHeight(e.target.value);

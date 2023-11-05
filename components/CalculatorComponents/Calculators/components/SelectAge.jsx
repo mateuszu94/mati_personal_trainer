@@ -7,9 +7,11 @@ export const SelectAge = ({ setAge, age }) => {
 
       <input
         required
-        className=" calculator-number_div "
+        className=" calculator-number_div"
         type="number"
         id="age"
+        min="1"
+        max="100"
         value={age}
         onChange={(e) => {
           setAge(e.target.value);

@@ -31,7 +31,7 @@ const IdealWeightCalculator = ({ SelectedType, useRouter }) => {
   };
   const pushRoute = () => {
     router.push(
-      `/Kalkulator_Wynik?typ=${SelectedType}&&płeć=${gender}&&przedziałWagi=${weightRange}`
+      `/Kalkulator_Wynik?typ=${SelectedType}&&płeć=${gender}&&przedziałWagi=${weightRange}&&wzrost=${height}&&wiek=${age} `
     );
   };
 

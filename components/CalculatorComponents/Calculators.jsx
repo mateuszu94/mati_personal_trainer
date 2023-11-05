@@ -10,7 +10,7 @@ const Calculator = () => {
   const selectedType = serchParams.get("typ");
 
   return (
-    <div className="w-full h-[100%] flex justify-end items-center">
+    <div className="w-full h-[100%] flex textShadow text-white justify-end items-center">
       {selectedType === "Kalkulator Wagi Idealnej" ? (
         <IdealWeightCalculator
           SelectedType={selectedType}
