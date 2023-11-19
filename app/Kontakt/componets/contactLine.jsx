@@ -32,7 +32,7 @@ export const ContactLine = ({ icon, text, href, color }) => {
 
         <a
           href={href}
-          className="ml-5 pt-2 text-xl text-slate-500 hover:cursor-pointer font-serif hover:text-prime "
+          className="ml-5 pt-2 subtitleSize text-slate-500 hover:cursor-pointer font-serif hover:text-prime "
         >
           : {text}
         </a>

@@ -79,9 +79,9 @@ const MyOffer = () => {
           </div>
         </div>
       ) : (
-        <div className="h-[100vh] flex flex-col grainy  ">
+        <div className="h-[100vh] flex flex-col items-center justify-center grainy  ">
           <div />
-          <div className="flex flex-row w-full h-full ">
+          <div className="flex flex-row  max-sm:flex-col w-full h-full ">
             <OfferPriceSetter
               time={time}
               setTime={setTime}

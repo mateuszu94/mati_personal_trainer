@@ -9,7 +9,7 @@ export const CalculatorIdealWeight = ({ range, age, height, gender }) => {
   return (
     <div className="flex w-full h-full justify-center items-center">
       <motion.div
-        className=" w-4/5 bg-baseColor opacity-0   flex-col justify-center rounded-2xl shadow-2xl border border-accentColor "
+        className=" w-4/5 max-sm:w-full bg-baseColor opacity-0   flex-col justify-center rounded-2xl shadow-2xl border border-accentColor "
         animate={{
           translateX: ["-30vh", "0vh"],
           opacity: [0, 1],
@@ -22,9 +22,9 @@ export const CalculatorIdealWeight = ({ range, age, height, gender }) => {
         <div className="titleSize mt-8  font-semibold  text-center text-accentColor textShadow   font-serif">
           Twoja idealna waga mieści sie w zakresie:
         </div>
-        <div className=" relative flex flex-row gap-10 justify-center  w-full     ">
-          <div className="  h-32 w-32 bg-white border-2 border-accentColor rounded-full flex  justify-center items-center">
-            <div className=" w-20 h-20 border-x-2 flex  border-black rounded-full top-1/2  justify-center items-center subtitleSize textShadow text-accentColor font-bold">
+        <div className=" relative flex flex-row gap-10 max-sm:gap-1 justify-center  w-full     ">
+          <div className="  h-32 w-32   bg-white border-2 border-accentColor rounded-full flex  justify-center items-center">
+            <div className=" w-20 h-20  border-x-2 flex  border-black rounded-full top-1/2  justify-center items-center subtitleSize textShadow text-accentColor font-bold">
               {" "}
               <CountUp
                 start={0}

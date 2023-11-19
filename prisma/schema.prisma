@@ -6,56 +6,52 @@ generator client {
 }
 
 datasource db {
-  provider     = "mysql"
+  provider     = "mongodb"
   url          = env("DATABASE_URL")
   relationMode = "prisma"
 }
 model User{
-     id String @id @default(uuid())
+     id String @id @default(auto()) @map("_id") @db.ObjectId
      role String
      name String
 
 }
 model offer {
-   id String @id @default(uuid())
+  id String @id @default(auto()) @map("_id") @db.ObjectId
    name String 
-   price Decimal
-   discountPerMonth Decimal
-   coupleDiscount Decimal
-   createdAt DateTime @default(now())
-   updatedAt DateTime @updatedAt
+   price Float
+   discountPerMonth Float
+   coupleDiscount Float
 }
 model opinions {
-   id String @id @default(uuid())
+ id String @id @default(auto()) @map("_id") @db.ObjectId
    nameOfPerson String 
   imageUrl String
    createdAt DateTime @default(now())
    updatedAt DateTime @updatedAt
 }
 model recipes {
-   id String @id @default(uuid()) 
+ id String @id @default(auto()) @map("_id") @db.ObjectId
    name String 
    imageUrl String
    ingredients String
    methodOfPreparation String
-   createdAt DateTime @default(now())
-   updatedAt DateTime @updatedAt
+
 }
 model transformations {
-   id String @id @default(uuid()) 
+  id String @id @default(auto()) @map("_id") @db.ObjectId
    name String 
    imageUrlBefore String
    imageUrlAfter String
-   time Decimal
+   time Float
    createdAt DateTime @default(now())
    updatedAt DateTime @updatedAt
 }
 model exercises {
-   id String @id @default(uuid()) 
+  id String @id @default(auto()) @map("_id") @db.ObjectId
    name String 
    url String
    muscleGroup String
-   createdAt DateTime @default(now())
-   updatedAt DateTime @updatedAt
+
 }
 

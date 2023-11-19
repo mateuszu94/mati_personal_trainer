@@ -44,7 +44,8 @@ export const SmallScreanHedder = ({ setopenSmallMenu, openSmallMenu }) => {
   }
   return (
     <motion.div
-      className="ease-in-out duration-300	 fixed w-[50vh]  h-[100vh] border-l-2    border-[#A9730B] bg-baseColor  right-0  z-50 "
+      className="ease-in-out duration-300	 fixed w-[50vh]  h-[100vh] border-l-2    border-[#A9730B] bg-black
+        right-0  z-50 "
       initial={{ translateX: "100%", borderRadius: 100, scale: 0 }}
       animate={{ translateX: "0%", borderRadius: 20, scale: 1 }}
       transition={{

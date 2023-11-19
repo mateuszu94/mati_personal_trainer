@@ -28,8 +28,8 @@ export const Header = () => {
   }, []);
 
   return (
-    <div className="">
-      <div className="bg-prime flex border-accentColor border-b-2 ">
+    <div className=" ">
+      <div className="bg-prime flex h-24 border-accentColor border-b-2 ">
         <Logo />
         <div className="flex w-full justify-end max-lg:hidden mr-16 ">
           <BigScreanHeder />
@@ -56,7 +56,7 @@ export const Header = () => {
       </div>
       {isScrolling && (
         <motion.div
-          className="bg-slate-500 shadow-md shadow-white right-10 fixed z-20  flex items-center justify-center rounded-full border border-accentColor  w-20 h-20"
+          className="bg-slate-500 shadow-md shadow-white right-10 max-sm:right-[-4px] fixed z-20  flex items-center justify-center rounded-full border border-accentColor  w-20 h-20 max-sm:w-12 max-sm:h-12"
           initial={{ translateX: "100%", radius: "50px", scale: 0 }}
           animate={{
             translateX: "0%",

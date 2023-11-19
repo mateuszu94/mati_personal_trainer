@@ -39,7 +39,7 @@ export const WhyWorkout = () => {
           className="relative z-30 opacity-0"
           style={{ y: y2, opacity: opacity3 }}
         >
-          <div className="absolute bg-white w-1/3 rounded-xl left-5 top-5 border-2 border-accentColor">
+          <div className="absolute bg-white w-1/3 max-sm:w-2/3 rounded-xl left-5 top-5 border-2 border-accentColor">
             <h2 className="font-mono subtitleSize text-center font-bold">
               {" "}
               Wprowadzenie do Roli Treningu w Twojej Drodze do Formy
@@ -54,7 +54,7 @@ export const WhyWorkout = () => {
               znaczenia treningu.
             </p>
           </div>
-          <div className="absolute bg-white w-1/3 rounded-xl left-1/3 top-[15rem] border-2 border-accentColor">
+          <div className="absolute bg-white w-1/3 max-sm:w-2/3 rounded-xl left-1/3 top-[15rem] border-2 border-accentColor">
             <h2 className="font-mono subtitleSize  text-center font-bold">
               Dlaczego Trening Jest Kluczowy?
             </h2>
@@ -67,7 +67,7 @@ export const WhyWorkout = () => {
               stres i poprawiając nastrój.
             </p>
           </div>
-          <div className="absolute bg-white w-1/3 rounded-xl left-2/3 top-[25rem] border-2 border-accentColor">
+          <div className="absolute bg-white w-1/3 max-sm:w-2/3 rounded-xl left-2/3 max-sm:left-0 top-[25rem] max-sm:top-[28rem] border-2 border-accentColor">
             <h2 className="font-mono subtitleSize text-center font-bold">
               Personalizowany Trening dla Twoich Celów
             </h2>

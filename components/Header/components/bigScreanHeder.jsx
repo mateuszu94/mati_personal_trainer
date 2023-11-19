@@ -64,7 +64,7 @@ export function BigScreanHeder() {
             <ul className="grid gap-3 p-4 md:w-[400px] bg-white lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink>
-                  <div className="flex h-full w-full bg-calculator bg-cover rounded-xl select-none flex-col justify-end  from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
+                  <div className="flex h-full w-full z-50 bg-calculator bg-cover rounded-xl select-none flex-col justify-end  from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
                     <div className="mb-2 mt-4 text-lg   font-medium"></div>
                     <p className="text-sm leading-tight text-white text-muted-foreground">
                       Zobacz dostępne kalkulatory i oblicz z łatwością swoje

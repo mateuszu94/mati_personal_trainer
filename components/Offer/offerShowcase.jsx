@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import { AiOutlineArrowLeft } from "react-icons/ai";
+import { useSwipeable } from "react-swipeable";
 
 const OfferShowcase = ({ text, bg, top, onDrag }) => {
   const [isMousePress, setIsMousePress] = useState(false);
@@ -12,6 +13,9 @@ const OfferShowcase = ({ text, bg, top, onDrag }) => {
   const [offSetX, setOffSetX] = useState(0);
   const [isPassTheMiddle, setIsPassTheMiddle] = useState(false);
   const [mouseEnter, setMouseEnter] = useState(false);
+  const handlers = useSwipeable({
+    onSwipedLeft: () => onDrag(),
+  });
 
   useEffect(() => {
     getDivXPosition();
@@ -102,12 +106,14 @@ const OfferShowcase = ({ text, bg, top, onDrag }) => {
   return (
     <div>
       <div
+        {...handlers}
+        onDrag={handleMouseMove}
         onMouseDown={handleMousePress}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseRelease}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className={`cursor-pointer border-2 border-slate-400 rounded-xl absolute h-[400px] textShadow text-center  flex-col transform skew-x-2 transition hover:z-50 hover:shadow-2xl MyServices__bgImg  hover:shadow-slate-400   duration-1000 w-full z-20  bg-cover   translate-y-5 ease-in-out ${bg} ${top}   `}
+        className={`cursor-pointer border-2 border-slate-400 rounded-xl absolute h-[400px] textShadow text-center  flex-col transform skew-x-2 transition hover:z-50 hover:shadow-2xl    hover:shadow-slate-400   duration-1000 w-full z-20  bg-cover   translate-y-5 ease-in-out ${bg} ${top}   `}
         style={FinalDivStyle}
       >
         <div
@@ -116,7 +122,7 @@ const OfferShowcase = ({ text, bg, top, onDrag }) => {
         >
           <AiOutlineArrowLeft />
         </div>
-        <div className="absolute top-[50%] left-[50%]  text-white font-serif font-bold text-6xl translate-y-[-50%]">
+        <div className="absolute top-[50%] left-[20%]   text-white font-serif font-bold titleSize translate-y-[-50%]">
           <h2>{text}</h2>
         </div>
         <div

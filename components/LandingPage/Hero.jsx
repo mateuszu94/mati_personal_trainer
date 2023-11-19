@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="w-1/2 h-full left-0 relative  ">
         {" "}
         <Image
-          className="absolute bottom-[10%] left-[15%] max-lg:left-[8%]  max-xl:scale-[1.6] 2xl:scale-[1.6] lg:scale-[1.2] md:scale-[1] max:md:slale[1]"
+          className="absolute bottom-[10%] max-sm:bottom-[20%] left-[15%] max-lg:left-[8%]  max-xl:scale-[1.6] 2xl:scale-[1.6]  md:scale-[1.5] max-sm:scale-[2.4] "
           width={516}
           height={531}
           src="/trenner.png"

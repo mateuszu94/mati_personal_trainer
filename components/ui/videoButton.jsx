@@ -37,17 +37,17 @@ export const VideoButton = ({
     <div
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="relative flex flex-col w-full h-full"
+      className="relative flex flex-col items-center justify-center w-full lg:h-full md:h-1/2 max-sm:h-full"
     >
-      <video ref={videoRef} className="w-full object-cover  h-full" loop muted>
+      <video ref={videoRef} className="w-full object-cover  h-full " loop muted>
         <source src={videoLink} type="video/mp4" />
       </video>
-      <div className="text-white  absolute z-30  gap-20 text-center flex  flex-col items-center top-10">
+      <div className="text-white  absolute z-30  gap-20 sm:gap-5 max-sm:gap-10 text-center flex  flex-col items-center top-10">
         <h2 className="titleSize textShadow">{title}</h2>
         <p className="subtitleSize textShadow">{text}</p>
-        <div className=" w-1/3 h-16 duration-300 ease-in-out textShadow  hover:border-green-600  shadow-lg shadow-white border-t-4 border-l-4 border-accentColor hover:border-t-0 hover:border-l-0  hover:border-b-4 hover:border-r-4">
-          <Link className="subtitleSize " href={buttonLink}>
-            {buttonText}
+        <div className=" w-1/3  duration-300 ease-in-out textShadow  hover:border-green-600  shadow-lg shadow-white border-t-4 border-l-4 border-accentColor hover:border-t-0 hover:border-l-0  hover:border-b-4 hover:border-r-4">
+          <Link href={buttonLink}>
+            <p className="subtitleSize p-3  max-sm:p-3">{buttonText}</p>
           </Link>
         </div>
       </div>

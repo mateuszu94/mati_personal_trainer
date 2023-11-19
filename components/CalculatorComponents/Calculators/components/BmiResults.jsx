@@ -24,7 +24,7 @@ export const CalculatorBMI = ({
   return (
     <div className="w-full h-full flex flex-col justify-center items-end">
       <motion.div
-        className="w-[90%]  shadow-md z-10  right-0 h-1/3 flex flex-row items-center justify-center  bg-slate-300 rounded-t-2xl"
+        className="w-[90%] max-sm:w-full  shadow-md z-10 gap-2 right-0 h-1/3 flex flex-row items-center justify-center  bg-slate-300 rounded-t-2xl"
         animate={
           bmiResoults === "wygłodzenie" ||
           bmiResoults === "wychudzenie" ||
@@ -43,11 +43,11 @@ export const CalculatorBMI = ({
           delay: 3,
         }}
       >
-        <div className=" text-6xl font-serif font-bold  ">BMI:</div>
-        <div className=" mx-10 border shadow-md border-white b w-40 h-40 rounded-full flex items-center justify-center">
-          <div className=" w-32 h-32 border border-white shadow-md  flexCenter rounded-full">
+        <div className=" titleSize font-serif font-bold  ">BMI:</div>
+        <div className="  border shadow-md border-white b w-40 h-40 2xl:w-52  2xl:h-52  rounded-full flex items-center justify-center">
+          <div className=" w-32 h-32 2xl:w-44 2xl:h-44 border border-white shadow-md  flexCenter rounded-full">
             <motion.div
-              className=" textShadow w-24 h-24 border-[2px] border-white shadow-md  flexCenter rounded-full text-2xl text-accentColor font-bold"
+              className=" textShadow w-24 h-24 2xl:w-36  2xl:h-36 border-[2px] border-white shadow-md  flexCenter rounded-full titleSize  text-accentColor font-bold"
               animate={{
                 backgroundColor: "#FFFFFF",
               }}
@@ -63,7 +63,7 @@ export const CalculatorBMI = ({
           </div>
         </div>{" "}
         <motion.div
-          className=" text-white text-4xl textShadow  grid grid-flow-col gap-4  opacity-0 font-serif font-bold"
+          className=" text-white titleSize textShadow  grid grid-flow-col gap-4   opacity-0 font-serif font-bold"
           animate={{
             opacity: [0, 1],
           }}
@@ -74,7 +74,7 @@ export const CalculatorBMI = ({
           }}
         >
           {bmiResoults}
-          <div className="text-black">
+          <div className="text-black mr-2">
             {bmiResoults === "Pożądana masa ciała" ? (
               <FaPersonCircleCheck />
             ) : null}
@@ -90,7 +90,7 @@ export const CalculatorBMI = ({
         </motion.div>
       </motion.div>
       <motion.div
-        className="w-[90%] right-0 h-[10%] font-serif grid grid-flow-col  shadow-md bg-slate-300 rounded-bl-xl rounded-br-xl"
+        className="w-[90%] max-sm:w-full right-0 h-[10%] font-serif grid grid-flow-col  shadow-md bg-slate-300 rounded-bl-xl rounded-br-xl"
         animate={{
           opacity: [0, 1],
           height: ["0%", "10%"],
@@ -100,19 +100,19 @@ export const CalculatorBMI = ({
           ease: "easeInOut",
         }}
       >
-        <div className="h-full text-xl border rounded-bl-xl shadow-md border-accentColor flex items-center justify-center">
+        <div className="h-full subtitleSize border text-center rounded-bl-xl shadow-md border-accentColor flex items-center justify-center">
           <BsFillPersonFill />
         </div>
-        <div className="h-full  text-xl border shadow-md border-accentColor flex items-center justify-center">
+        <div className="h-full  subtitleSize border text-center shadow-md border-accentColor flex items-center justify-center">
           Wiek : {age} lat
         </div>
-        <div className="h-full border  text-xl shadow-md border-accentColor flex items-center justify-center">
+        <div className="h-full border  subtitleSize text-center shadow-md border-accentColor flex items-center justify-center">
           Wzrost : {height} cm
         </div>
-        <div className="h-full border  text-xl shadow-md border-accentColor flex  items-center justify-center">
+        <div className="h-full border  subtitleSize text-center shadow-md border-accentColor flex  items-center justify-center">
           Płec : {gender}
         </div>
-        <div className="h-full border  text-xl rounded-br-xl shadow-md border-accentColor flex items-center justify-center">
+        <div className="h-full border  subtitleSize text-center rounded-br-xl shadow-md border-accentColor flex items-center justify-center">
           Waga : {weight} kg
         </div>
       </motion.div>

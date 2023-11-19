@@ -33,12 +33,9 @@ const Footer = () => {
   const [phoneOpen, setphoneOpen] = useState(false);
   const [emailOpen, setemailOpen] = useState(false);
   return (
-    <div className="grid  grid-flow-col bg-prime border-t-2 border-accentColor  z-50">
+    <div className="grid  grid-flow-col max-sm:grid-flow-row bg-prime border-t-2 border-accentColor  z-50">
       <div className="px-10 p-y-4 text-2xl flex flex-row  ">
-        <div className="flex items-center justify-center pr-10">
-          {" "}
-          <Logo />
-        </div>{" "}
+        <div className="flex items-center justify-center pr-10"> </div>{" "}
         <div className="text-blue-400 hover:scale-150 duration-500 ">
           <Link
             href="https://www.facebook.com/mateusz.watroba.311"

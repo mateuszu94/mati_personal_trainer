@@ -14,7 +14,7 @@ const CalculatorDescription = () => {
   return (
     <div className="text-black w-[98%] border-b-4  border-r-4 rounded-xl bg-white ">
       <div>
-        <h2 className="flex text-4xl font-serif border-l-2 border-b-2 rounded-l border-accentColor">
+        <h2 className="flex subtitleSize font-serif border-l-2 border-b-2 rounded-l border-accentColor">
           {selectedType}{" "}
           <AnimateLetters
             letterClass="calculator_description-specialFont"
@@ -23,7 +23,7 @@ const CalculatorDescription = () => {
           ></AnimateLetters>
         </h2>
         {selectedType === "Kalkulator Bmi" ? (
-          <p>
+          <p className="textSize">
             Wskaźnik masy ciała (BMI, z ang. Body Mass Index) to prosta i
             popularna metoda oceny masy ciała osoby na podstawie jej wagi i
             wzrostu. Wskaźnik ten pomaga określić, czy dana osoba ma masę ciała
@@ -31,7 +31,7 @@ const CalculatorDescription = () => {
           </p>
         ) : null}
         {selectedType === "Kalkulator Wagi Idealnej" ? (
-          <p className="font-serif p-4">
+          <p className="font-serif p-2 textSize">
             - Kalkulator wagi idealnej to narzędzie, które pomaga określić, jaka
             waga jest uważana za idealną lub zdrową dla danej osoby na podstawie
             różnych czynników, takich jak wzrost , wiek i płeć. Nie jest to
@@ -40,7 +40,7 @@ const CalculatorDescription = () => {
           </p>
         ) : null}
         {selectedType === "Kalkulator Kalorii" ? (
-          <p className="font-serif p-4">
+          <p className="font-serif p-2 textSize">
             - Kalkulator Kalorii to narzędzie, które pomoże Ci zrozumieć i
             kontrolować swoje spożycie kalorii, co jest kluczowe dla osiągnięcia
             celów związanych z wagą i zdrowiem. Aplikacja umożliwia prosty
@@ -49,7 +49,7 @@ const CalculatorDescription = () => {
           </p>
         ) : null}
 
-        <h2 className="flex text-4xl font-serif border-l-2 border-b-2 rounded-l border-accentColor">
+        <h2 className="flex subtitleSize font-serif border-l-2 border-b-2 rounded-l border-accentColor">
           <AnimateLetters
             letterClass="calculator_description-specialFont"
             strArray={jakList}
@@ -58,7 +58,7 @@ const CalculatorDescription = () => {
           {selectedType} ?
         </h2>
         {selectedType === "Kalkulator Bmi" ? (
-          <ol className="list-decimal font-serif p-6">
+          <ol className="list-decimal font-serif textSize p-2 pl-6">
             <li>Wprowadź dane, takie jak wzrost, wiek, płeć</li>
             <li>Kalkulator używa tych danych do obliczenia BMI</li>
             <li>
@@ -68,7 +68,7 @@ const CalculatorDescription = () => {
           </ol>
         ) : null}
         {selectedType === "Kalkulator Wagi Idealnej" ? (
-          <ol className="list-decimal font-serif p-6">
+          <ol className="list-decimal font-serif textSize p-2 pl-6">
             <li>Wprowadź dane, takie jak wzrost, wiek, płeć</li>
             <li>
               Kalkulator używa tych danych do obliczenia zakresu wag uważanych
@@ -85,7 +85,7 @@ const CalculatorDescription = () => {
           </ol>
         ) : null}
         {selectedType === "Kalkulator Kalorii" ? (
-          <ol className="list-decimal font-serif p-6">
+          <ol className="list-decimal font-serif textSize p-2 pl-6">
             <li>Wprowadź dane, takie jak wzrost, wiek, płeć jak i cel diety</li>
             <li>
               Kalkulator używa tych danych do obliczenia zakresu Cal które
@@ -102,7 +102,7 @@ const CalculatorDescription = () => {
             </li>
           </ol>
         ) : null}
-        <h2 className="flex text-4xl font-serif border-l-2 border-t-2 rounded-l border-accentColor">
+        <h2 className="flex subtitleSize font-serif border-l-2 border-t-2 rounded-l border-accentColor">
           <AnimateLetters
             letterClass="calculator_description-specialFont"
             strArray={jakInterpretowac}
@@ -112,10 +112,10 @@ const CalculatorDescription = () => {
         </h2>
         {selectedType === "Kalkulator Bmi" ? (
           <div>
-            <p className="font-serif p-2">
+            <p className="font-serif textSize p-2">
               Interpratacje BMI nastempuje na podswaie ponizszego przedziału:
             </p>
-            <ol className="list-decimal font-serif p-6">
+            <ol className="list-decimal font-serif textSize p-2 pl-6">
               <li>Niedowaga: BMI poniżej 18,5</li>
               <li>Waga prawidłowa: BMI między 18,5 - 24,9</li>
               <li>Nadwaga: BMI między 25 - 29,9</li>
@@ -123,7 +123,7 @@ const CalculatorDescription = () => {
               <li>Otyłość (klasa II): BMI między 35 - 39,9</li>
               <li>Otyłość (klasa III): BMI 40 lub więcej</li>
             </ol>
-            <p className="font-serif p-2">
+            <p className="font-serif textSize p-2">
               Należy pamiętać, że choć BMI jest użytecznym narzędziem do oceny
               masy ciała na poziomie populacyjnym, to nie uwzględnia on
               czynników takich jak masa mięśniowa, gęstość kości czy rozkład
@@ -135,7 +135,7 @@ const CalculatorDescription = () => {
         ) : null}
         {selectedType === "Kalkulator Wagi Idealnej" ? (
           <div>
-            <p className="font-serif p-2">
+            <p className="font-serif textSize p-1">
               Kalkulator wagi idealnej jest narzędziem służącym do określenia
               przybliżonej wagi, która jest uważana za optymalną lub zdrową dla
               danego człowieka. Jednak warto zaznaczyć, że waga idealna może być
@@ -143,7 +143,7 @@ const CalculatorDescription = () => {
               samopoczucie danej osoby. Oto kilka kwestii, które należy wziąć
               pod uwagę przy interpretacji wyników kalkulatora wagi idealnej:
             </p>
-            <ol className="list-decimal font-serif p-6">
+            <ol className="list-decimal textSize font-serif p-1 pl-6">
               <li>
                 Zdrowie i samopoczucie: Waga nie jest jedynym czynnikiem
                 określającym zdrowie i samopoczucie. Inne aspekty, takie jak
@@ -157,7 +157,7 @@ const CalculatorDescription = () => {
                 tkanki mięśniowej
               </li>
             </ol>
-            <p className="font-serif p-2">
+            <p className="font-serif textSize p-1">
               Kalkulator wagi idealnej może być użytecznym narzędziem
               orientacyjnym, ale nie powinien być jedynym czynnikiem, na którym
               opierasz swoje decyzje dotyczące zdrowego stylu życia. Zawsze
@@ -168,14 +168,14 @@ const CalculatorDescription = () => {
         ) : null}
         {selectedType === "Kalkulator Kalorii" ? (
           <div>
-            <p className="font-serif p-2">
+            <p className="font-serif textSize p-2">
               Interpretacja wyników kalkulatora kalorii może pomóc w
               zrozumieniu, ile kalorii potrzebujesz w ciągu dnia, aby osiągnąć
               swoje cele związane z dietą, czy to utratą wagi, utrzymaniem masy
               ciała czy zyskaniem masy mięśniowej.
             </p>
 
-            <p className="font-serif p-2">
+            <p className="font-serif textSize p-2">
               Warto pamiętać, że kalkulatory kalorii są narzędziem
               orientacyjnym, a rzeczywiste zapotrzebowanie kaloryczne może się
               różnić w zależności od wielu czynników, takich jak genetyka,

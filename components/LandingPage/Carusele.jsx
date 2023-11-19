@@ -53,12 +53,14 @@ const Carusele = () => {
     setWidth(ref.current.scrollWidth - ref.current.offsetWidth);
   }, []);
   return (
-    <div className="w-full grainy flex flex-col items-center pb-20">
+    <div className="w-full grainy flex flex-col border-t-2 border-r-2 rounded-xl border-prime items-center pb-20">
       {" "}
-      <h2 className="titleSize font-serif  p-5">ZOBACZ OPINIE KLIENTÓW</h2>
+      <h2 className="titleSize font-sans textShadowPrime p-5">
+        ZOBACZ OPINIE KLIENTÓW
+      </h2>
       <motion.div
         ref={ref}
-        className=" cursor-grab w-2/5 border-2 border-accentColor rounded-3xl  relative h-full   overflow-hidden"
+        className=" cursor-grab w-2/5 max-sm:w-[90%] rounded-3xl  relative h-full   overflow-hidden"
         whileTap={{ cursor: "grabbing" }}
       >
         <motion.div

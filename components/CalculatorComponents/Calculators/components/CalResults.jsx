@@ -24,24 +24,24 @@ export const CalculatorCal = ({
 
   return (
     <div className="w-full h-full flex flex-col justify-center  items-end">
-      <motion.div className="w-[90%]  shadow-md z-10   h-1/2 flex flex-col relative   bg-slate-300 rounded-t-2xl">
+      <motion.div className="w-[90%] max-sm:w-full  shadow-md z-10   h-1/2 max-sm:h-2/3 flex flex-col relative   bg-slate-300 rounded-t-2xl">
         <div className="text-center text-3xl font-serif text-accentColor textShadow rounded-t-xl bg-prime font-semibold border-b-2 p-2 ">
           Zapotrzebowanie kaloryczne :
         </div>
-        <div className="w-[40%] h-[50%] absolute right-5 top-[20%] shadow-md shadow-black bg-white rounded-xl">
+        <div className="w-[40%] h-[50%] max-sm:w-full max-sm:h-1/4  absolute right-5 top-[20%] max-sm:top-[55%] shadow-md shadow-black bg-white rounded-xl">
           {objective === "Utrzymać wagę" ? (
-            <div className="text-center text-accentColor h-[30%] bg-prime rounded-t-xl text-xl font-serif ">
+            <div className="text-center text-accentColor  bg-prime rounded-t-xl text-xl font-serif ">
               <p>Ilość cal aby</p>
               <p>{objective} :</p>
             </div>
           ) : null}
           {objective !== "Utrzymać wagę" ? (
-            <div className="text-center text-accentColor textShadow h-[30%] bg-prime rounded-t-xl text-xl font-serif  ">
+            <div className="text-center text-accentColor textShadow  bg-prime rounded-t-xl text-xl font-serif  ">
               <p>Przedział cal aby</p>
               <p> {objective} :</p>
             </div>
           ) : null}
-          <div className="text-3xl font-bold grid grid-flow-col items-center text-center  h-[80%]">
+          <div className="text-3xl font-bold grid grid-flow-col items-center text-center  ">
             {cpmObjective.map((objective, index) => (
               <div
                 key={index}
@@ -128,7 +128,7 @@ export const CalculatorCal = ({
         </div>
       </motion.div>
       <motion.div
-        className="w-[90%] right-0 h-[10%] font-serif grid grid-flow-col  shadow-md bg-slate-300 rounded-bl-xl rounded-br-xl"
+        className="w-[90%] max-sm:w-full right-0 h-[10%] font-serif grid grid-flow-col  shadow-md bg-slate-300 rounded-bl-xl rounded-br-xl"
         animate={{
           opacity: [0, 1],
           height: ["0%", "10%"],
@@ -138,19 +138,19 @@ export const CalculatorCal = ({
           ease: "easeInOut",
         }}
       >
-        <div className="h-full text-xl border rounded-bl-xl shadow-md border-accentColor flex items-center justify-center">
+        <div className="h-full subtitleSize text-center border rounded-bl-xl shadow-md border-accentColor flex items-center justify-center">
           <BsFillPersonFill />
         </div>
-        <div className="h-full  text-xl border shadow-md border-accentColor flex items-center justify-center">
+        <div className="h-full  subtitleSize text-center border shadow-md border-accentColor flex items-center justify-center">
           Wiek : {age} lat
         </div>
-        <div className="h-full border  text-xl shadow-md border-accentColor flex items-center justify-center">
+        <div className="h-full border  subtitleSize text-center shadow-md border-accentColor flex items-center justify-center">
           Wzrost : {height} cm
         </div>
-        <div className="h-full border  text-xl shadow-md border-accentColor flex  items-center justify-center">
+        <div className="h-full border  subtitleSize text-center shadow-md border-accentColor flex  items-center justify-center">
           Płec : {gender}
         </div>
-        <div className="h-full border  text-xl rounded-br-xl shadow-md border-accentColor flex items-center justify-center">
+        <div className="h-full border  subtitleSize text-center rounded-br-xl shadow-md border-accentColor flex items-center justify-center">
           Waga : {weight} kg
         </div>
       </motion.div>

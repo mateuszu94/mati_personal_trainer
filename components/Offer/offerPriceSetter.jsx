@@ -11,7 +11,7 @@ const OfferPriceSetter = ({
   numberOfPeopleOptions,
 }) => {
   return (
-    <div className="w-1/2  h-full flex flex-col items-center justify-center">
+    <div className="w-1/2  max-sm:w-full  flex flex-col items-center justify-center">
       <div className="w-full flex flex-col mb-5 gap-4">
         <span>
           {option == Options[0] && (

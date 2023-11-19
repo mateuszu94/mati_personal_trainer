@@ -15,7 +15,10 @@ const AboutMe = () => {
   const x2 = useTransform(scrollYProgress, [0.2, 0.4], ["100% ", "0%"]);
   const x3 = useTransform(scrollYProgress, [0.4, 0.6], ["100% ", "0%"]);
   return (
-    <div ref={targetRef} className="w-full h-[80vh] flex flex-row">
+    <div
+      ref={targetRef}
+      className="w-full border-3 border-blue-500 h-[80vh]  flex flex-row relative"
+    >
       <div className="w-1/2 h-full flex justify-center items-center">
         <Image
           src="/TrainerCrossArms.png"
@@ -25,7 +28,7 @@ const AboutMe = () => {
           className="scale-125"
         />
       </div>
-      <div className="w-1/2 h-full grid gap-5">
+      <div className="w-1/2 h-full relative grid gap-5">
         <motion.div
           className="grainy p-5 border-accentColor border-2 "
           style={{ x }}

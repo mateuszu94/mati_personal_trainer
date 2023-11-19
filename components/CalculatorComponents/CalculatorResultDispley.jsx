@@ -65,7 +65,7 @@ const CalculatorResultDispley = () => {
   }
 
   return (
-    <div className={`w-1/2 h-full flex flex-col justify-center `}>
+    <div className={`w-1/2 max-lg:w-full h-full flex flex-col justify-center `}>
       {selectedType === "Kalkulator Wagi Idealnej" ? (
         <CalculatorIdealWeight
           range={weightRange}

@@ -108,13 +108,13 @@ const contact = () => {
 
   return (
     <div className="overflow-x-hidden	 h-[100vh] w-full  flex flex-row   items-center  max-sm:flex-col  grainy ">
-      <div className="w-1/2 h-full flex items-center bg-cover bg-TakingWeight justify-center flex-col max-sm:w-full rounded-r-3xl	 max-sm:rounded-3xl">
+      <div className="w-1/2 h-full flex items-center bg-cover bg-TakingWeight justify-center flex-col max-sm:w-full max-sm:mb-10 rounded-r-3xl	 max-sm:rounded-none">
         <div className="w-[80%] h-[60%] backdrop-blur-lg   flex-col  flex items-center justify-center rounded-xl	 max-sm:h-full to">
           {" "}
-          <h2 className="text-4xl text-center p-4 font-bold font-sans text-black">
+          <h2 className="text-4xl text-center p-4 font-bold font-sans text-black textShadowWhite ">
             Umów się na bezpłatną konsultację!
           </h2>
-          <p className="text-center text-white font-bold">
+          <p className="text-center text-white font-bold textShadow">
             {" "}
             Po wypełnieniu formularza skontaktujemy się z Tobą w przeciągu kilku
             godzin
@@ -123,7 +123,7 @@ const contact = () => {
             onSubmit={onSubmit}
             className="flex flex-col m-2 w-[80%] h-[80%] opacity-100 backdrop-blur-none  "
           >
-            <label htmlFor="name" className="contact-form_lebleText">
+            <label htmlFor="name" className="contact-form_lebleText ">
               IMIĘ I NAZWISKO *
             </label>
             <input
@@ -179,9 +179,9 @@ const contact = () => {
           </form>
         </div>
       </div>
-      <div className="flex  items-center max-sm:justify-center flex-col  w-1/2 h-full">
+      <div className="flex  items-center max-sm:justify-center flex-col max-sm:w-full  w-1/2 h-full">
         <motion.div
-          className=" w-1/2  "
+          className=" w-1/2 max-md:w-full"
           animate={{
             translateY: ["-30vh", "0vh"],
             opacity: [0, 1],
