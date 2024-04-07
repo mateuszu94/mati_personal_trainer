@@ -13,11 +13,11 @@ const Step = ({ stepNumber, description, content, img, title }) => {
     offset: ["end end", "end start"],
   });
 
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0.4, 1], [1, 0]);
+  const opacity = useTransform(scrollYProgress, [0.4, 1], [1, 0]);
   const y = useTransform(
     scrollYProgress,
-    [0.1, 0.25, 0.7, 1],
+    [0.4, 0.7, 0.9, 1],
     ["0% ", "-55%", "-60% ", "-80%"]
   );
 

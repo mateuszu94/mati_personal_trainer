@@ -1,16 +1,19 @@
 import React from "react";
+import Image from "next/image";
 
 export const OpinionCarusele = ({ opinion }) => {
   return (
-    <div className=" bg-white  min-h-full min-w-[100%] flex justify-center  rounded-xl ">
+    <div className=" bg-white  flex justify-center object-contain  rounded-xl ">
       <div className="flex flex-col  items-center  select-none">
-        <img
-          alt="Client Profile"
-          src={opinion.image}
-          width={70}
-          height={70}
-          className="rounded-full mb-4 "
-        />
+        <div className="w-[120px]  ">
+          <Image
+            alt="Client Profile"
+            src={opinion.image}
+            width={70}
+            height={70}
+            className="rounded-full   mb-4 "
+          />
+        </div>
         <div className="text-center  subtitleSize">
           <p>{opinion.opinion}</p>
         </div>

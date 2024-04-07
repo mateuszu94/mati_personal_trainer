@@ -1,7 +1,7 @@
 "use client";
 import AnimateLetters from "@/lib/animateLetters";
 import { useSearchParams } from "next/navigation";
-import React, { useState } from "react";
+import React from "react";
 
 const coToList = "- Co to jest?".split("");
 const jakList = "Jak działa - ".split("");

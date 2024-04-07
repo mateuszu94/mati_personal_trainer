@@ -1,7 +1,7 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
 import { OpinionCarusele } from "./components/opinionCarusele";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 const opinionsArrey = [
   {
     name: "Anna",
@@ -46,33 +46,25 @@ const opinionsArrey = [
 ];
 
 const Carusele = () => {
-  const ref = useRef();
-  const [width, setWidth] = useState(0);
-
-  useEffect(() => {
-    setWidth(ref.current.scrollWidth - ref.current.offsetWidth);
-  }, []);
   return (
-    <div className="w-full grainy flex flex-col border-t-2 border-r-2 rounded-xl border-prime items-center pb-20">
+    <div className="w-full grainy flex flex-col border-t-2 border-r-2 rounded-xl  border-prime items-center pb-20">
       {" "}
       <h2 className="titleSize font-sans textShadowPrime p-5">
         ZOBACZ OPINIE KLIENTÓW
       </h2>
-      <motion.div
-        ref={ref}
-        className=" cursor-grab w-2/5 max-sm:w-[90%] rounded-3xl  relative h-full   overflow-hidden"
-        whileTap={{ cursor: "grabbing" }}
+      <Carousel
+        showThumbs={false}
+        autoPlay
+        infiniteLoop
+        interval={2000}
+        showArrows={true}
+        showStatus={false}
+        className="relative sm:px-10 py-5 sm:pt-20 pb-5 max-w-[800px]  rounded-[30px] sm:mx-auto"
       >
-        <motion.div
-          drag="x"
-          dragConstraints={{ right: 0, left: -width }}
-          className="w-full h-full  flex flex-row "
-        >
-          {opinionsArrey.map((opinion, index) => (
-            <OpinionCarusele key={index} opinion={opinion} />
-          ))}{" "}
-        </motion.div>
-      </motion.div>
+        {opinionsArrey.map((opinion, index) => (
+          <OpinionCarusele key={index} opinion={opinion} />
+        ))}{" "}
+      </Carousel>
     </div>
   );
 };

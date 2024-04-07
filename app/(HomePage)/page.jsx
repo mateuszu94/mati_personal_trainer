@@ -2,7 +2,7 @@ import Footer from "@/components/Footer";
 import AboutMe from "@/components/LandingPage/AboutMe";
 import Carusele from "@/components/LandingPage/Carusele";
 import Hero from "@/components/LandingPage/Hero";
-import HoockSection from "@/components/LandingPage/HoockSection";
+import HoockSection from "@/components/LandingPage/HoockSection"
 import Services from "@/components/LandingPage/ServicesPage";
 
 import Steps from "@/components/LandingPage/Steps";

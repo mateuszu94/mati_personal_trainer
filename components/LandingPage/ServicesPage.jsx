@@ -14,7 +14,6 @@ const Services = () => {
   return (
     <div className="h-[90vh]">
       {" "}
-      <h2 className="h-[10vh] grainy text-center text-3xl p-5">Oferta</h2>
       <div className="w-full h-[80vh] flex flex-row relative lg:flex-row md:flex-col max-md:flex-col">
         <VideoButton
           videoLink={"/food.mp4"}
