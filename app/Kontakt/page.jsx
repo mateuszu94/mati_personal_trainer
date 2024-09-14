@@ -107,7 +107,7 @@ const contact = () => {
   };
 
   return (
-    <div className="overflow-x-hidden	 h-[100vh] w-full  flex flex-row   items-center  max-sm:flex-col  grainy ">
+    <div className="overflow-x-hidden	 h-[100vh] w-full  flex flex-row   items-center  max-sm:flex-col  bg-black  ">
       <div className="w-1/2 h-full flex items-center bg-cover bg-TakingWeight justify-center flex-col max-sm:w-full max-sm:mb-10 rounded-r-3xl	 max-sm:rounded-none">
         <div className="w-[80%] h-[60%] backdrop-blur-lg   flex-col  flex items-center justify-center rounded-xl	 max-sm:h-full to">
           {" "}
@@ -179,11 +179,11 @@ const contact = () => {
           </form>
         </div>
       </div>
-      <div className="flex  items-center max-sm:justify-center flex-col max-sm:w-full  w-1/2 h-full">
+      <div className="flex  items-center max-sm:justify-center flex-col max-sm:w-full rounded-r-3xl  grainy w-1/2 h-full">
         <motion.div
           className=" w-1/2 max-md:w-full"
           animate={{
-            translateY: ["-30vh", "0vh"],
+            translateY: ["-30vh", "4vh"],
             opacity: [0, 1],
             shadow: ["md", "xl"],
           }}
@@ -211,7 +211,7 @@ const contact = () => {
             delay: 2,
           }}
         >
-          <Separator className="bg-black my-4 " />
+         
           <h2 className="contact-info_title ">Dane kontaktowe</h2>{" "}
           {contactInfo.map((contact) => (
             <div>

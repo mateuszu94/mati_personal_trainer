@@ -18,7 +18,7 @@ export const ContactLine = ({ icon, text, href, color }) => {
       <div className="flex flex-row">
         <a
           href={href}
-          className={` ${color} rounded-xl w-12 h-12  flex justify-center items-center duration-700 ease-in m-2 text-white hover:text-prime hover:bg-green-600 animate-in   hover:rounded-full hover:cursor-pointer`}
+          className={` ${color} rounded-xl w-12 h-12  flex justify-center items-center duration-700  m-2 text-white hover:text-prime hover:bg-green-600 animate-in   hover:rounded-full hover:cursor-pointer`}
         >
           {icon}
         </a>

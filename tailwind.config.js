@@ -60,6 +60,7 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       backgroundImage: {
+        aboutMePicture : "url('/aboutMePicture.jpg')",
         hero: "url('/Bg_Hero.jpg')",
         SoloTreningIcon: "url('/SoloTreningIcon.png')",
         BoyIcon: "url('/BoyIcon.png')",

@@ -57,16 +57,16 @@ export function BigScreanHeder() {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-white hover:text-accentColor">
+          <NavigationMenuTrigger className="text-white bg-prime hover:bg-prime  hover:text-accentColor">
             Kalkulatory
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid gap-3 p-4 md:w-[400px] bg-white lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+            <ul className="grid gap-3  md:w-[400px] bg-prime lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink>
-                  <div className="flex h-full w-full z-50 bg-calculator bg-cover rounded-xl select-none flex-col justify-end  from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
-                    <div className="mb-2 mt-4 text-lg   font-medium"></div>
-                    <p className="text-sm leading-tight text-white text-muted-foreground">
+                  <div className="flex h-full w-full z-50 bg-calculator bg-cover  rounded-l-none  shadow-xl shadow-blue-300  p-2  rounded-xl select-none flex-col justify-strt  from-muted/50 to-muted  no-underline outline-none focus:shadow-md">
+             
+                    <p className="text-xl leading-tight text-left  text-white text-muted-foreground textShadow">
                       Zobacz dostępne kalkulatory i oblicz z łatwością swoje
                       parametry
                     </p>
@@ -96,22 +96,23 @@ export function BigScreanHeder() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-white hover:text-accentColor">
+        <NavigationMenuItem >
+          <NavigationMenuTrigger className="text-white bg-prime hover:bg-prime   hover:text-accentColor">
             Materiały pomocnicze
           </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 bg-white p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+          <NavigationMenuContent className="rounded-r-3xl">
+            <ul className="grid w-[400px] gap-3 bg-prime  md:w-[500px] border-accentColor   md:grid-cols-2 lg:w-[600px] ">
               <li className="row-span-4">
                 <NavigationMenuLink>
-                  <div className="flex h-full w-full bg-smallDiet bg-cover rounded-xl select-none flex-col justify-end  from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
-                    <div className="mb-2 mt-4 text-lg   font-medium"></div>
-                    <p className="text-xl leading-tight text-white text-muted-foreground">
+                  <div className="flex h-full w-full bg-smallDiet rounded-l-none rounded-r-[2.5rem] shadow-xl shadow-blue-300   bg-cover  select-none flex-col justify-start p-2 from-muted/50 to-muted  no-underline outline-none focus:shadow-md">
+                   
+                    <p className="text-3xl leading-tight text-left  text-white text-muted-foreground textShadow">
                       Zobacz dostępne materiały pomocnicze
                     </p>
                   </div>
                 </NavigationMenuLink>
               </li>
+              <div className="my-3">
               {components.map((component) => (
                 <ListItem
                   key={component.title}
@@ -120,7 +121,7 @@ export function BigScreanHeder() {
                 >
                   {component.description}
                 </ListItem>
-              ))}
+              ))}</div>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
@@ -141,16 +142,16 @@ export function BigScreanHeder() {
 const ListItem = ({ className, title, children, ...props }) => {
   return (
     <li>
-      <NavigationMenuLink className="hover:bg-slate-400 " asChild>
+      <NavigationMenuLink className=" hover:bg-prime     " asChild>
         <a
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "block select-none space-y-1 rounded-none hover:shadow-md hover:shadow-white hover:text-accentColor p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className
           )}
           {...props}
         >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+          <div className=" font-medium leading-none text-xl  text-white">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug  text-muted-foreground text-slate-300">
             {children}
           </p>
         </a>

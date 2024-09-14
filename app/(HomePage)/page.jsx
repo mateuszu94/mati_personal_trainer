@@ -10,7 +10,7 @@ import Why from "@/components/LandingPage/Why";
 
 export default function Home() {
   return (
-    <div className="overflow-hidden">
+    <div className="">
       <Hero></Hero>
       <Why />
       <Steps></Steps>

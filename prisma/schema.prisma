@@ -14,8 +14,11 @@ enum UserRole {
 }
 model User{
      id String @id @default(auto()) @map("_id") @db.ObjectId
-     name String
+     name String?
      email String?
+     password String?
+     image String?
+     emailVerified String?
      role UserRole @default(User)
 
 
@@ -35,9 +38,10 @@ model Userexercise {
 model offer {
   id String @id @default(auto()) @map("_id") @db.ObjectId
    name String 
-   price Float
-   discountPerMonth Float
-   coupleDiscount Float
+   price Int
+   discountPerMonth Int
+   discountPerYear Int
+   coupleDiscount Int
      createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
    @@map("offers")
