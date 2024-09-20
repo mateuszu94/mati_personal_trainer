@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
 const CalculatorDeatailDescription = () => {
-  return <div>CalculatorDeatailDescription</div>;
-};
+    return <div>CalculatorDeatailDescription</div>
+}
 
-export default CalculatorDeatailDescription;
+export default CalculatorDeatailDescription

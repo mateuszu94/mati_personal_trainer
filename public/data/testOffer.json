@@ -1,26 +1,19 @@
 [
     {
       "name": "Dieta",
-      "type": "siłowe",
-      "muscle": " biceps",
-      "equipment": "hantle",
-      "difficulty": "początkujący",
-      "instructions": "Usiądź na ławce pochyłej z hantlami w każdej ręce. Powinny być one przyciśnięte do oparcia, a stopy trzymać razem. Pozwól, aby hantle swobodnie zwisały wzdłuż ciała, trzymając je neutralnym chwytem. To będzie pozycja wyjściowa. Zacznij ruch poprzez zgięcie w łokciach, starając się utrzymać górną część ramienia nieruchomo. Kontynuuj do góry i zatrzymaj się, a następnie powoli wróć do pozycji startowej."
+      "price": 120,
+      "discount":5
+     
     },
     {
       "name": "Trenning",
-      "type": "siłowe",
-      "muscle": " biceps",
-      "equipment": "hantle",
-      "difficulty": "początkujący",
-      "instructions": "Usiądź na ławce pochyłej z hantlami w każdej ręce. Powinny być one przyciśnięte do oparcia, a stopy trzymać razem. Pozwól, aby hantle swobodnie zwisały wzdłuż ciała, trzymając je neutralnym chwytem. To będzie pozycja wyjściowa. Zacznij ruch poprzez zgięcie w łokciach, starając się utrzymać górną część ramienia nieruchomo. Kontynuuj do góry i zatrzymaj się, a następnie powoli wróć do pozycji startowej."
+      "price": 120,
+      "discount":5
+     
     },
     {
       "name": "Dieta/Trennig",
-      "type": "siłowe",
-      "muscle": " biceps",
-      "equipment": "hantle",
-      "difficulty": "początkujący",
-      "instructions": "Usiądź na ławce pochyłej z hantlami w każdej ręce. Powinny być one przyciśnięte do oparcia, a stopy trzymać razem. Pozwól, aby hantle swobodnie zwisały wzdłuż ciała, trzymając je neutralnym chwytem. To będzie pozycja wyjściowa. Zacznij ruch poprzez zgięcie w łokciach, starając się utrzymać górną część ramienia nieruchomo. Kontynuuj do góry i zatrzymaj się, a następnie powoli wróć do pozycji startowej."
+      "price": 120,
+      "discount":5
     } 
 ]

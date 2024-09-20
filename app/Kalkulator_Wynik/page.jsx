@@ -1,7 +1,7 @@
-import React from "react"
+import React from 'react'
 
-import CalculatorResultDispley from "@/components/CalculatorComponents/CalculatorResultDispley"
-import CalcualtorsAddBanner from "@/components/CalculatorComponents/CalcualtorsAddBanner"
+import CalculatorResultDispley from '@/components/CalculatorComponents/CalculatorResultDispley'
+import CalcualtorsAddBanner from '@/components/CalculatorComponents/CalcualtorsAddBanner'
 
 const page = () => {
     return (
